@@ -1,9 +1,45 @@
 <html !DOCTYPE>
 	<head>
-		pomodoro
+		<style>
+		p {
+		  text-align: center;
+		  font-size: 60px;
+		}
+		</style>
 	</head>
-	<body>
-		pomodoro timer implementatin
+	<body class="container">
+	  <div class="row">
+	    <div class="text-right col-md-6">
+	      <button class="btn-success" id="setPomodoro" type="input" onclick="setPomodoro()">Pomodoro</button>
+	    </div>
+	    <div class="text-left col-md-6">
+	  <button class="btn-info" id="setShortBreak" type="input" onclick="setShortBreak()">Short Break</button>
+	    </div>
+	  </div>
+	  <div id="main-layout" class="jumbotron">
+	    <div class="row">
+	      <div class="col-md-6 text-right"> <button class="btn" id="start" type="input" onclick="start()">Start</button> </div>
+	       <div class="col-md-6 text-left"> <button class="btn" id="stop" type="input" onclick="stop()">Stop</button> </div>
+	    </div>
+	    <div class="row text-center">
+	      <span class="col-md-6"><b>Pomodoro Length</b></span>
+	      <span class="col-md-6"><b>Break Length</b></span>
+	    </div>
+	    <div class="row text-center">
+	      <span class="col-md-6">
+		<span class="text-center"><button class="btn-link" id="plus" type="input" onclick="changePomodoro(1)">+</button></span>
+		<span id="pomodoroLength"></span>
+		<span class="text-center"><button class="btn-link" id="minus" type="input" onclick="changePomodoro(-1)">-</button> </span>
+	      </span>
+	      <span class="col-md-6">
+		<span class="text-center"><button class="btn-link" id="plus" type="input" onclick="changeBreak(1)">+</button></span>
+		<span id="breakLength"></span>
+		<span class="text-center"><button class="btn-link" id="minus" type="input" onclick="changeBreak(-1)">-</button> </span>
+	      </span>
+	    </div>
+	    <div class="row"> 
+	      <p class="font-weight-bold col-md-12 text-center" id="pomodoro"></p>
+	    </div>
 	</body>
 </html>
 
