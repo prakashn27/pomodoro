@@ -83,14 +83,14 @@ function start() {
 }
 function setPomodoro() {
   isPomodoro = true;
-  document.getElementById("main-layout").style.background = "#92e03e";
+  document.getElementById("pomodoro").style.color = "#92e03e";
   currentTimerMin = pomodoroMin;
   currentTimerSec = pomodoroSec;
   updateDisplay();
 }
 function setShortBreak() {
   isPomodoro = false;
-  document.getElementById("main-layout").style.background = "#3edae0";
+  document.getElementById("pomodoro").style.color = "#3edae0";
   currentTimerMin = breakMin;
   currentTimerSec = breakSec;
   updateDisplay();
