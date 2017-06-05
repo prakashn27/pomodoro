@@ -39,10 +39,14 @@ function updateBreakDuration() {
 function enableEditing() {
   document.getElementById("plus").disabled = false;
   document.getElementById("minus").disabled = false;
+  document.getElementById("plusBreak").disabled = false;
+  document.getElementById("minusBreak").disabled = false;
 }
 function disableEditing() {
   document.getElementById("plus").disabled = true;
   document.getElementById("minus").disabled = true;
+  document.getElementById("plusBreak").disabled = true;
+  document.getElementById("minusBreak").disabled = true;
 }
 function updateDisplay() {
   document.getElementById("pomodoro").innerHTML = currentTimerMin + ":" + ((currentTimerSec < 10)?"0"+currentTimerSec:currentTimerSec);
