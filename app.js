@@ -2,7 +2,7 @@
 // global variables
 var pomodoroMin = 25;
 var pomodoroSec = 0;
-var breakMin = 2;
+var breakMin = 5;
 var breakSec = 0;
 
 
