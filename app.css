@@ -1,0 +1,42 @@
+body {
+  background: #222;
+  color: #fff
+}
+
+#main-layout {
+  background: #222;
+  color: #fff
+}
+
+.container {
+  margin-top : 20px;
+}
+
+#pomodoro {
+  color : #fff;
+}
+
+.timer {
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  font-size: 4em;
+  border: 2px solid #111;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.fill {
+  content: '';
+  position: absolute;
+  background: #99CC00;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
