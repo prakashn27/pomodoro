@@ -8,6 +8,11 @@ body {
   color: #fff
 }
 
+p {
+  text-align: center;
+  font-size: 60px;
+}
+
 .container {
   margin-top : 20px;
 }
