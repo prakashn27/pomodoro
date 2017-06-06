@@ -14,6 +14,7 @@ var x;
 init();
 
 function init() {
+  console.log("pomodoro clock is initialized");
   setPomodoro();
   updatePomodoroDuration();
   updateBreakDuration();
@@ -75,7 +76,6 @@ function start() {
         setPomodoro();
       }
       stop();
-      reset();
     } else if(currentTimerSec > 0) {
       currentTimerSec = currentTimerSec - 1;
     } else {
