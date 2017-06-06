@@ -1,20 +1,20 @@
 "using strict";
 // global variables
-var pomodoroMin = 25;
+var pomodoroMin = 5;
 var pomodoroSec = 0;
-var breakMin = 5;
+var breakMin = 2;
 var breakSec = 0;
 
 
 // Logic implementation
 var currentTimerMin;
 var currentTimerSec;
+var totalTime;
 var isPomodoro = true;
 var x;
 init();
 
 function init() {
-  console.log("pomodoro clock is initialized");
   setPomodoro();
   updatePomodoroDuration();
   updateBreakDuration();
@@ -51,6 +51,8 @@ function disableEditing() {
 }
 function updateDisplay() {
   document.getElementById("pomodoro").innerHTML = currentTimerMin + ":" + ((currentTimerSec < 10)?"0"+currentTimerSec:currentTimerSec);
+  let curTime = currentTimerMin*60 + currentTimerSec;
+  document.getElementById("fill").style.height = Math.abs(curTime/totalTime *100 - 100)+"%";
 }
 function stop() {
   enableEditing();
@@ -76,6 +78,7 @@ function start() {
         setPomodoro();
       }
       stop();
+      reset();
     } else if(currentTimerSec > 0) {
       currentTimerSec = currentTimerSec - 1;
     } else {
@@ -88,14 +91,18 @@ function start() {
 function setPomodoro() {
   isPomodoro = true;
   document.getElementById("pomodoro").style.color = "#92e03e";
+  document.getElementById("fill").style.background = "#92e03e";
   currentTimerMin = pomodoroMin;
   currentTimerSec = pomodoroSec;
+  totalTime = pomodoroMin*60 + pomodoroSec;
   updateDisplay();
 }
 function setShortBreak() {
   isPomodoro = false;
   document.getElementById("pomodoro").style.color = "#3edae0";
+  document.getElementById("fill").style.background = "#3edae0";
   currentTimerMin = breakMin;
   currentTimerSec = breakSec;
+  totalTime = breakMin*60 + breakSec;
   updateDisplay();
 }
